@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu & Order | Street Greek</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Street Greek home">
+        <img src="assets/logo.png" alt="Street Greek" />
+      </a>
+      <ul class="nav__list">
+        <li><a href="menu.html" aria-current="page">Menu & Order</a></li>
+        <li><a href="reserve.html">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="auth.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main">
+    <h1>Menu & Order Online</h1>
+
+    <div class="order-layout">
+      <section class="order-menu" aria-label="Menu to order">
+        <div class="grid">
+          <article class="menu-item">
+            <img src="assets/Tzatziki%20&%20Pita.jpg.jpeg" alt="Tzatziki dip with pita" />
+            <div>
+              <h3>Tzatziki & Pita</h3>
+              <p>Creamy yogurt, cucumber, garlic, dill.</p>
+              <p class="price" data-price="6.50">£6.50</p>
+              <button class="btn btn--primary" data-add-item='{"id":"tzatziki","name":"Tzatziki & Pita","price":6.5}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="assets/Falafel.jpg.webp" alt="Crispy falafel balls" />
+            <div>
+              <h3>Falafel</h3>
+              <p>Herbed chickpea fritters, tahini.</p>
+              <p class="price" data-price="7.50">£7.50</p>
+              <button class="btn btn--primary" data-add-item='{"id":"falafel","name":"Falafel","price":7.5}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="Chicken gyro wrap" />
+            <div>
+              <h3>Chicken Gyro</h3>
+              <p>Tomato, onion, fries, tzatziki, warm pita.</p>
+              <p class="price" data-price="11.00">£11.00</p>
+              <button class="btn btn--primary" data-add-item='{"id":"chicken-gyro","name":"Chicken Gyro","price":11}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="assets/Char-grilled%20Souvlaki.jpg" alt="Pork souvlaki skewer" />
+            <div>
+              <h3>Pork Souvlaki Plate</h3>
+              <p>Pita, Greek salad, lemon potatoes, tzatziki.</p>
+              <p class="price" data-price="15.00">£15.00</p>
+              <button class="btn btn--primary" data-add-item='{"id":"pork-souvlaki","name":"Pork Souvlaki Plate","price":15}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="assets/Village%20Greek%20Salad.png" alt="Greek salad" />
+            <div>
+              <h3>Greek Salad</h3>
+              <p>Tomato, cucumber, peppers, olives, feta, oregano.</p>
+              <p class="price" data-price="9.00">£9.00</p>
+              <button class="btn btn--primary" data-add-item='{"id":"greek-salad","name":"Greek Salad","price":9}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800&auto=format&fit=crop" alt="Baklava pieces with honey" />
+            <div>
+              <h3>Baklava</h3>
+              <p>Layers of filo, walnuts, honey syrup.</p>
+              <p class="price" data-price="5.50">£5.50</p>
+              <button class="btn btn--primary" data-add-item='{"id":"baklava","name":"Baklava","price":5.5}'>Add to Order</button>
+            </div>
+          </article>
+          <article class="menu-item">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop" alt="Greek yogurt with honey and nuts" />
+            <div>
+              <h3>Yogurt & Honey</h3>
+              <p>Thick yogurt, thyme honey, walnuts.</p>
+              <p class="price" data-price="4.50">£4.50</p>
+              <button class="btn btn--primary" data-add-item='{"id":"yogurt-honey","name":"Yogurt & Honey","price":4.5}'>Add to Order</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="order-cart" aria-label="Your order">
+        <h2>Your Order</h2>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-summary">
+          <div><span>Subtotal</span><span id="cart-subtotal">£0.00</span></div>
+          <div><span>VAT (20%)</span><span id="cart-vat">£0.00</span></div>
+          <div class="cart-total"><span>Total</span><span id="cart-total">£0.00</span></div>
+        </div>
+        <button id="cart-checkout" class="btn btn--primary" disabled>Checkout (demo)</button>
+        <div id="cart-status" class="success" role="status" aria-live="polite" hidden></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="footer-inner">
+      <p class="footer-contact">
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <span class="sep">|</span>
+        <a href="mailto:hello@streetgreek.example">hello@streetgreek.example</a>
+      </p>
+      <p class="footer-copy">&copy; <span id="year"></span> Street Greek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth-modal.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery-extras.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Street Greek | Greek Street Food</title>
+  <meta name="theme-color" content="#f15a24" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Street Greek home">
+        <img src="assets/logo.png" alt="Street Greek" />
+      </a>
+      <ul class="nav__list">
+        <li><a href="menu.html">Menu & Order</a></li>
+        <li><a href="reserve.html">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="auth.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main">
+    <section class="hero" aria-label="Street Greek hero" data-reveal>
+      <div class="hero__content">
+        <h1>Fresh. Fast. Greek.</h1>
+        <p>Authentic street-side souvlaki, gyros, and mezze crafted with love.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="menu.html">Explore Menu</a>
+          <a class="btn" href="reserve.html">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel" aria-label="Featured dishes carousel" data-carousel data-reveal>
+      <div class="carousel__viewport" id="carousel-track">
+        <figure class="carousel__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+          <img src="assets/Char-grilled%20Souvlaki.jpg" alt="Char-grilled souvlaki skewers with pita and tzatziki" />
+          <figcaption>Char-grilled Souvlaki</figcaption>
+        </figure>
+        <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" tabindex="-1">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Chicken gyro wrap with tomatoes and onions" />
+          <figcaption>Classic Gyro Wrap</figcaption>
+        </figure>
+        <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" tabindex="-1">
+          <img src="assets/Village%20Greek%20Salad.png" alt="Greek salad with feta, olives, and cucumber" />
+          <figcaption>Village Greek Salad</figcaption>
+        </figure>
+      </div>
+      <div class="carousel__controls">
+        <button class="carousel__btn" data-carousel-prev aria-label="Previous slide">&#9664;</button>
+        <button class="carousel__btn" data-carousel-next aria-label="Next slide">&#9654;</button>
+      </div>
+      <div class="carousel__dots" role="tablist" aria-label="Select slide" data-carousel-dots></div>
+      <p class="carousel__status visually-hidden" aria-live="polite" data-carousel-status>Slide 1 of 3</p>
+    </section>
+
+    <section class="feature-cards" aria-label="Highlights" data-reveal>
+      <article class="card">
+        <h2 class="card__title">Made Daily</h2>
+        <p>Pitas baked fresh. Sauces from scratch. Ingredients sourced locally.</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Street Vibes</h2>
+        <p>Casual, friendly, and fast—perfect for lunch, dinner, or late night bites.</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Vegetarian Friendly</h2>
+        <p>Plenty of hearty vegetarian options packed with Mediterranean flavor.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="footer-inner">
+      <p class="footer-contact">
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <span class="sep">|</span>
+        <a href="mailto:hello@streetgreek.example">hello@streetgreek.example</a>
+      </p>
+      <p class="footer-copy">&copy; <span id="year"></span> Street Greek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/auth-modal.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery-extras.js"></script>
+</body>
+</html>

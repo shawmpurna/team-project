@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account | Street Greek</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Street Greek home">
+        <img src="assets/logo.png" alt="Street Greek" />
+      </a>
+      <ul class="nav__list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reserve.html">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="auth.html" aria-current="page">Account</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main">
+    <!-- Dashboard first (top) -->
+    <section id="account-dashboard" class="account" data-reveal hidden>
+      <div class="account-card">
+        <h1 style="margin-top:0">My Account</h1>
+        <dl class="account-info">
+          <div><dt>Name</dt><dd id="acct-name">—</dd></div>
+          <div><dt>Email</dt><dd id="acct-email">—</dd></div>
+        </dl>
+        <div class="account-actions">
+          <button id="btn-logout" class="btn">Log out</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign in/up below -->
+    <section class="auth" aria-label="Account" data-reveal>
+      <div class="auth__card" role="tablist" aria-label="Account forms" id="auth-card">
+        <div class="auth__tabs">
+          <button class="auth__tab is-active" role="tab" id="tab-login" aria-selected="true" aria-controls="panel-login">Log in</button>
+          <button class="auth__tab" role="tab" id="tab-signup" aria-selected="false" aria-controls="panel-signup">Sign up</button>
+        </div>
+
+        <div class="auth__panels">
+          <form id="panel-login" class="auth__panel" role="tabpanel" aria-labelledby="tab-login" tabindex="0" novalidate>
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" required aria-required="true" aria-describedby="login-email-error" />
+            <span id="login-email-error" class="error" aria-live="polite"></span>
+
+            <label for="login-password">Password</label>
+            <div class="input-with-action">
+              <input id="login-password" name="password" type="password" required aria-required="true" aria-describedby="login-password-error" />
+              <button type="button" class="show-password" aria-label="Show password" data-toggle-password="#login-password">👁</button>
+            </div>
+            <span id="login-password-error" class="error" aria-live="polite"></span>
+
+            <button type="submit" class="btn btn--primary" style="margin-top:1rem">Log in</button>
+            <p class="help-text" style="margin-top:0.75rem">No account? <a href="#" data-switch-to="signup">Create one</a>.</p>
+          </form>
+
+          <form id="panel-signup" class="auth__panel is-hidden" role="tabpanel" aria-labelledby="tab-signup" tabindex="-1" hidden novalidate>
+            <label for="signup-name">Full name</label>
+            <input id="signup-name" name="name" type="text" required aria-required="true" aria-describedby="signup-name-error" />
+            <span id="signup-name-error" class="error" aria-live="polite"></span>
+
+            <label for="signup-email">Email</label>
+            <input id="signup-email" name="email" type="email" required aria-required="true" aria-describedby="signup-email-error" />
+            <span id="signup-email-error" class="error" aria-live="polite"></span>
+
+            <label for="signup-password">Password</label>
+            <div class="input-with-action">
+              <input id="signup-password" name="password" type="password" minlength="8" required aria-required="true" aria-describedby="signup-password-error signup-password-help" />
+              <button type="button" class="show-password" aria-label="Show password" data-toggle-password="#signup-password">👁</button>
+            </div>
+            <span id="signup-password-help" class="help-text">At least 8 characters.</span>
+            <span id="signup-password-error" class="error" aria-live="polite"></span>
+
+            <label for="signup-confirm">Confirm password</label>
+            <input id="signup-confirm" name="confirm" type="password" required aria-required="true" aria-describedby="signup-confirm-error" />
+            <span id="signup-confirm-error" class="error" aria-live="polite"></span>
+
+            <button type="submit" class="btn btn--primary" style="margin-top:1rem">Create account</button>
+            <p class="help-text" style="margin-top:0.75rem">Already have an account? <a href="#" data-switch-to="login">Log in</a>.</p>
+          </form>
+        </div>
+
+        <div id="auth-success" role="status" aria-live="polite" class="success" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="footer-inner">
+      <p class="footer-contact">
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <span class="sep">|</span>
+        <a href="mailto:hello@streetgreek.example">hello@streetgreek.example</a>
+      </p>
+      <p class="footer-copy">&copy; <span id="year"></span> Street Greek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

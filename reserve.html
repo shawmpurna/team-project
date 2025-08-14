@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reserve | Street Greek</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Street Greek home">
+        <img src="assets/logo.png" alt="Street Greek" />
+      </a>
+      <ul class="nav__list">
+        <li><a href="menu.html">Menu & Order</a></li>
+        <li><a href="reserve.html" aria-current="page">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="auth.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main">
+    <h1>Reserve a Table</h1>
+    <p>We are open daily from 11:00 to 22:00.</p>
+
+    <form id="reservation-form" novalidate aria-labelledby="reservation-title">
+      <fieldset>
+        <legend id="reservation-title">Reservation Details</legend>
+
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required aria-required="true" aria-describedby="name-error" />
+        <span id="name-error" class="error" aria-live="polite"></span>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-required="true" aria-describedby="email-error" />
+        <span id="email-error" class="error" aria-live="polite"></span>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="e.g. 07123 456789" required aria-required="true" aria-describedby="phone-error" />
+        <span id="phone-error" class="error" aria-live="polite"></span>
+
+        <div class="grid grid--two">
+          <div>
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required aria-required="true" aria-describedby="date-error" />
+            <span id="date-error" class="error" aria-live="polite"></span>
+          </div>
+          <div>
+            <label for="time">Time</label>
+            <input id="time" name="time" type="time" required aria-required="true" aria-describedby="time-error" />
+            <span id="time-error" class="error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <label for="party">Party Size</label>
+        <input id="party" name="party" type="number" min="1" max="12" required aria-required="true" aria-describedby="party-error" />
+        <span id="party-error" class="error" aria-live="polite"></span>
+
+        <label for="requests">Special Requests (optional)</label>
+        <textarea id="requests" name="requests" rows="4" aria-describedby="requests-help"></textarea>
+        <span id="requests-help" class="help-text">Let us know about allergies or seating preferences.</span>
+
+        <button type="submit" class="btn btn--primary">Submit Reservation</button>
+      </fieldset>
+    </form>
+
+    <div id="reservation-success" role="status" aria-live="polite" class="success" hidden>
+      Thank you! Your reservation request has been received.
+    </div>
+  </main>
+
+  <footer class="site-footer simple-footer">
+    <div class="footer-inner">
+      <p class="footer-contact">
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <span class="sep">|</span>
+        <a href="mailto:hello@streetgreek.example">hello@streetgreek.example</a>
+      </p>
+      <p class="footer-copy">&copy; <span id="year"></span> Street Greek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/reservation.js"></script>
+  <script src="js/auth-modal.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery-extras.js"></script>
+</body>
+</html>
